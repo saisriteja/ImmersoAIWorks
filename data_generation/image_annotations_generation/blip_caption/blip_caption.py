@@ -1,5 +1,5 @@
-from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
+from transformers import BlipForConditionalGeneration, BlipProcessor
 
 
 class ImageCaptioningModel:
@@ -20,7 +20,7 @@ class ImageCaptioningModel:
         :return: A tuple of (conditional_caption, unconditional_caption).
         """
         # Open the image
-        raw_image = Image.open(image_path).convert('RGB')
+        raw_image = Image.open(image_path).convert("RGB")
 
         # Conditional captioning
         text = "a photography of"
@@ -32,11 +32,11 @@ class ImageCaptioningModel:
         inputs = self.processor(raw_image, return_tensors="pt").to(self.device)
         out = self.model.generate(**inputs)
         caption_unconditional = self.processor.decode(out[0], skip_special_tokens=True)
-        
+
         data = {
             "image_path": image_path,
             "caption": caption_conditional,
-            "unconditional_caption": caption_unconditional
+            "unconditional_caption": caption_unconditional,
         }
 
         return data
