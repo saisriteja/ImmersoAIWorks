@@ -1,0 +1,10 @@
+conda_env_name = 'generic'
+
+[DatasetInfo]
+dataset_path  = 'sample_images'
+
+[ModelInfo]
+modelname = "Salesforce/blip-image-captioning-base"
+
+[MetaData]
+outputpath = 'generated_captions/blip/output.json'

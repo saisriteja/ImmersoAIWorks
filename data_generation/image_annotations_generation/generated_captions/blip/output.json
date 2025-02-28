@@ -1,0 +1,15 @@
+{
+    "metadata": {
+        "model_name": "Salesforce/blip-image-captioning-base",
+        "time_taken": 0.03,
+        "total_no_of_images": 6
+    },
+    "captions": {
+        "sample_images/315.jpg": "a photography of a man in a suit",
+        "sample_images/314.jpg": "a photography of a man in a suit and tie",
+        "sample_images/317.jpg": "a photography of a scene from the movie the great ga ga ga ga ga ga ga ga ga ga ga ga ga",
+        "sample_images/311.jpg": "a photography of a man in a tuk tuk tuk tuk tuk tuk tuk tuk",
+        "sample_images/316.jpg": "a photography of a man in a pink hat and a pink top hat",
+        "sample_images/312.jpg": "a photography of a bald bald man in a white shirt"
+    }
+}
