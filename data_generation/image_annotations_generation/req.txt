@@ -1,2 +1,5 @@
 logzero
 toml
+black
+ruff
+isort
