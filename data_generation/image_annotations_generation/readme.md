@@ -1,17 +1,68 @@
-Certainly! Here's an improved version of your README in a clearer and more structured format:
+Certainly! To place the "Steps to Add a New Model for Captioning" under a toggle bar, you can format it using Markdown in a way that is compatible with platforms that support such interactive elements. However, note that standard Markdown does not natively support toggle bars or collapsible sections. That functionality can be achieved using HTML elements, or in certain platforms like GitHub, you may use a collapsible section syntax.
 
----
+Here's how you can structure it with a toggle bar using HTML within the Markdown:
 
-# Image Annotation Generation
+````markdown
+# Image Captioning Project
 
-## Overview
-
-This tool generates image annotations by analyzing images in a provided folder and creating captions for each image. The result is saved in a JSON format, which includes metadata and captions for each image.
+This project generates captions for images using pre-trained models. The configuration for the environment and model is specified in a `config.toml` file, and the script uses the specified model for captioning the images.
 
 ## Input
 
-- **Image Folder**: The folder containing the images you want to annotate.
-- **Output JSON Path**: The location where the resulting JSON file will be saved.
+### Config File
+
+Before running the project, make sure your `config.toml` file is properly set up. The `config.toml` file specifies:
+
+- The name of the conda environment.
+- The dataset directory containing all the images.
+- The model to use for captioning.
+- The output path for the generated captions.
+
+Here’s an example of the `config.toml` file:
+
+```toml
+conda_env_name = 'generic'
+
+[DatasetInfo]
+dataset_path  = 'sample_images'
+
+[ModelInfo]
+modelname = "Salesforce/blip-image-captioning-base"
+
+[MetaData]
+outputpath = 'generated_captions/blip/output.json'
+```
+````
+
+### Explanation:
+
+- `conda_env_name`: The name of the conda environment that should be activated before running the script.
+- `dataset_path`: The root directory for all the images you want to process.
+- `modelname`: The model you want to use for captioning (e.g., `Salesforce/blip-image-captioning-base`).
+- `outputpath`: The path where the generated captions will be saved (e.g., `'generated_captions/blip/output.json'`).
+
+---
+
+## Running the Project
+
+To run the project, follow these steps:
+
+1. **Make sure your conda environment is set up correctly.**
+   Ensure that your conda environment contains all the necessary packages for running the script (e.g., PyTorch, transformers, etc.).
+
+2. **Activate the Conda Environment**:
+   The conda environment specified in the `config.toml` file will be automatically activated using the `run.sh` script.
+
+3. **Run the `run.sh` Script**:
+   This script will activate the environment and run the main Python script for captioning.
+
+   Example:
+
+   ```bash
+   ./run.sh
+   ```
+
+---
 
 ## Output
 
@@ -71,6 +122,8 @@ Sample output:
 }
 ```
 
+---
+
 ## How to Use
 
 1. **Prepare Your Environment**:
@@ -91,3 +144,56 @@ Sample output:
 - Required dependencies (e.g., image processing libraries, deep learning models for captioning)
 
 ---
+
+<details>
+<summary><h2><strong>Steps to Add a New Model for Captioning</strong></h2></summary>
+
+To add a new model for image captioning, follow these steps:
+
+### 1. Folder Structure
+
+For naming convention, create a folder with the model name and append `_caption` to it. For example:
+
+- `blip_caption/blip_caption.py`
+
+### 2. Implement the Image Captioning Class
+
+Inside the model folder (e.g., `blip_caption`), create a Python file (`blip_caption.py`) and define the `ImageCaptioningModel` class.
+
+```python
+class ImageCaptioningModel:
+    def __init__(self, model_name: str, device: str = "cuda"):
+        # Initialize all necessary variables (model loading, processor, etc.)
+        pass
+
+    def generate_caption(self, image_path: str):
+        # Implement the inference logic to generate captions
+        pass
+```
+
+- `__init__`: Initialize necessary variables, such as loading the model, setting the device (`cuda` or `cpu`), and any other configurations.
+- `generate_caption`: Implement the inference logic that will process the input image and generate a caption.
+
+### 3. Import the New Model in `main.py`
+
+In your main script, you’ll need to import the new model class and initialize it based on the model name specified in the `config.toml` file.
+
+Example snippet for `main.py`:
+
+```python
+# Initialize the model(s)
+if self.model_name == "Salesforce/blip-image-captioning-base":
+    from blip_caption.blip_caption import ImageCaptioningModel
+    self.model = ImageCaptioningModel(self.model_name)
+else:
+    logger.error(f"Model {self.model_name} not supported.")
+    return
+```
+
+This code checks the model name and imports the corresponding class for captioning. If the model is not supported, it logs an error.
+
+### 4. Run the Inference
+
+After adding the new model and modifying the code, you can run the inference by executing the `run.sh` script.
+
+</details>
