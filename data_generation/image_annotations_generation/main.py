@@ -26,6 +26,12 @@ class CaptioningPipeline:
             from blip_caption.blip_caption import ImageCaptioningModel
 
             self.model = ImageCaptioningModel(self.model_name)
+
+        if self.model_name == "llava:7b":
+            from ollama_caption.ollama_caption import ImageCaptioningModel
+
+            self.model = ImageCaptioningModel(self.model_name)
+
         else:
             logger.error(f"Model {self.model_name} not supported.")
             return

@@ -1,10 +1,11 @@
 conda_env_name = 'generic'
 
 [DatasetInfo]
-dataset_path  = 'sample_images'
+dataset_path = 'sample_images'
 
 [ModelInfo]
-modelname = "Salesforce/blip-image-captioning-base"
+# modelname = "Salesforce/blip-image-captioning-base"
+modelname = 'llava:7b'
 
 [MetaData]
-outputpath = 'generated_captions/blip/output.json'
+outputpath = 'generated_captions/llava/output.json'

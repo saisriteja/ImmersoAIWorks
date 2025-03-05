@@ -197,3 +197,11 @@ This code checks the model name and imports the corresponding class for captioni
 After adding the new model and modifying the code, you can run the inference by executing the `run.sh` script.
 
 </details>
+
+### Requirements for Models
+
+1. Ollama
+
+```
+curl -fsSL https://ollama.com/install.sh | sh
+```
