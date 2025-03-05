@@ -3,6 +3,7 @@ from typing import Dict, List
 from pydantic import BaseModel, ValidationError
 from ollama import chat
 import os
+from tqdm import tqdm
 
 
 class ImageComparison(BaseModel):
@@ -87,12 +88,17 @@ class CaptionComparator:
         :return: List of ImageComparison results
         """
         # Find common image paths across all models
-        common_images = set.intersection(
-            *[set(captions.keys()) for captions in self.captions_by_model.values()]
+        common_images = list(
+            set.intersection(
+                *[set(captions.keys()) for captions in self.captions_by_model.values()]
+            )
         )
 
         results = []
-        for image_path in common_images:
+        # Use tqdm for progress tracking
+        for image_path in tqdm(
+            common_images, desc="Analyzing Image Captions", unit="image"
+        ):
             # Collect captions for this image across all models
             image_captions = {
                 model: self.captions_by_model[model].get(image_path, "")
@@ -125,7 +131,6 @@ class CaptionComparator:
 
 # Example usage
 def main(json_paths: List[str], json_output_path: str, model_name: str):
-
     comparator = CaptionComparator(model_name=model_name, json_paths=json_paths)
 
     results = comparator.analyze_image_captions()

@@ -1,40 +1,51 @@
 [
   {
-    "image": "sample_images/314.jpg",
+    "image": "sample_images/317.jpg",
     "common": {
       "scene": [
-        "a blurry or clear image"
+        "Group of men in a dimly lit room",
+        "Traditional attire",
+        "Ornate arches and columns"
       ],
       "details": [
-        "an object on top of another object"
+        "Muted colors",
+        "Soft lighting",
+        "Intricate carvings on walls"
       ]
     },
     "different": {
       "details": [
-        "Model (blip): a blurry, pixelated representation of what appears to be a tree or a pole with some type of object on top.",
-        "Model (llama3.2-vision): The image is a blurry, pixelated representation of what appears to be a tree or a pole with some type of object on top. The object on top could be a bird's nest, but it is difficult to tell due to the poor quality of the image.",
-        "Model (llava): This is a still from a movie featuring an actor with a bald head, dressed in what appears to be traditional Indian attire. He has his eyes closed and a contemplative expression on his face. The background suggests an opulent interior setting, possibly a room with ornate decorations.",
-        "Model (llava-llama3): The image captures a dynamic scene of a person standing behind a white screen."
+        "Model (blip): A scene from the movie 'The Great Ga Ga Ga Ga...'",
+        "Model (llama3.2-vision): Indian temple or mosque setting, postures convey reverence and respect.",
+        "Model (llava): Contemplative man with shaved head and beard in traditional attire, elaborate backdrop.",
+        "Model (llava-llama3): Group gathered around a golden chalice, grand room with natural light, intricate designs on walls."
       ]
     }
   },
   {
-    "image": "sample_images/311.jpg",
+    "image": "sample_images/314.jpg",
     "common": {
       "scene": [
-        "a man in traditional Indian attire"
+        "man in a suit and tie",
+        "tree or pole with an object on top"
       ],
       "details": [
-        "rich red turban",
-        "intricately embroidered shirt or jacket with gold accents"
+        "blurry image",
+        "poor quality"
       ]
     },
     "different": {
       "details": [
-        "Model (blip): a tuk tuk tuk tuk tuk tuk tuk tuk",
-        "Model (llama3.2-vision): The image showcases a man donning traditional Indian attire...",
-        "Model (llava): This is a still from a video...",
-        "Model (llava-llama3): In the image, a man is standing in front of a group..."
+        "A blurry, pixelated representation of what appears to be a tree or a pole with some type of object on top.",
+        "The image is a still from a movie featuring an actor with a bald head, dressed in what appears to be traditional Indian attire.",
+        "He has his eyes closed and a contemplative expression on his face.",
+        "The background suggests an opulent interior setting, possibly a room with ornate decorations.",
+        "There is a watermark text visible over the image, which reads 'HD 1080p', indicating that this could be a high-definition screen capture from the film.",
+        "The overall tone of the image is dramatic and introspective.",
+        "The image captures a dynamic scene of a person standing behind a white screen.",
+        "The individual is blurred, suggesting motion or swift action, adding a sense of urgency to the moment.",
+        "The colors are predominantly muted, with the exception of the white screen and a streak of brown light emanating from it, which stands out against the otherwise subdued palette.",
+        "This light could possibly represent a laser beam or another form of intense illumination."
       ]
     }
   },
@@ -42,23 +53,32 @@
     "image": "sample_images/316.jpg",
     "common": {
       "scene": [
-        "man in traditional attire",
-        "ornate outfit",
-        "regal appearance"
+        "Indoor setting with ornate architectural features and dim lighting"
       ],
       "details": [
-        "white shirt with intricate embroidery",
-        "wide-brimmed hat",
-        "golden accents",
-        "blurred background"
+        "The image captures a moment, frozen in time"
       ]
     },
     "different": {
-      "details": [
+      "model captions": [
         "Model (blip): A man in a pink hat and a pink top hat",
-        "Model (llama3.2-vision): The subject is attired in an ornate outfit, comprising a white shirt with intricate embroidery on the sleeves and collar.",
-        "Model (llava): The man is wearing a white kurta and has a bald head",
-        "Model (llava-llama3): He is adorned with a large pink turban that contrasts sharply with his white shirt and gold necklace"
+        "Model (llama3.2-vision): This still image captures a scene from the 2022 Indian historical drama film 'The Empire', showcasing a man in traditional attire.",
+        "Model (llava): The image is a still from a movie or video. It features a man who appears to be in his mid-adult years, with short dark hair and a clean-shaven head."
+      ],
+      "description": [
+        "The background of the image is blurred, but it appears to depict a grand setting, possibly a palace or royal court, with other figures visible in the distance.",
+        "Behind him, a group of men in similar traditional Indian clothing form a semi-circle, their attention seemingly focused on the man in the pink turban.",
+        "The number of men in traditional clothing suggests that this could be a cultural or religious gathering."
+      ],
+      "style": [
+        "Model (blip): The image is a photography of a man in a pink hat and a pink top hat",
+        "Model (llama3.2-vision): The overall atmosphere evokes a sense of opulence and grandeur, characteristic of period dramas like 'The Empire'.",
+        "Model (llava-llama3): The image captures a moment, frozen in time, within what appears to be a temple or palace setting."
+      ],
+      "atmosphere": [
+        "Model (blip): The overall atmosphere evokes a sense of opulence and grandeur.",
+        "Model (llama3.2-vision): The overall atmosphere evokes a sense of opulence and grandeur, characteristic of period dramas like 'The Empire'.",
+        "Model (llava-llama3): An atmosphere that complements the subjects' attire."
       ]
     }
   },
@@ -66,19 +86,58 @@
     "image": "sample_images/315.jpg",
     "common": {
       "scene": [
-        "man in a suit",
-        "object on surface"
+        "a man in a suit"
       ],
       "details": [
-        "dark color background",
-        "smooth object shape"
+        "dark brown color",
+        "smooth and flat shape"
       ]
     },
     "different": {
       "details": [
-        "Model (blip): The image appears to be a close-up of a surface with a small, white or light-colored object in the center.",
-        "Model (llama3.2-vision): The image is a still from a video, possibly a film or television show.",
-        "Model (llava-llama3): The image captures a dynamic scene of a dust storm."
+        "Model (blip): A photography of a man in a suit.",
+        "Model (llama3.2-vision): The image appears to be a close-up of a surface with a small, white or light-colored object in the center. The surface is dark brown and has a rough texture.",
+        "Model (llava): The image is a still from a video, possibly a film or television show. It features a man in the foreground with a shaved head and beard. He is wearing white attire...",
+        "Model (llava-llama3): The image captures a dynamic scene of a dust storm. The main focus is on the right side of the image..."
+      ]
+    }
+  },
+  {
+    "image": "sample_images/311.jpg",
+    "common": {
+      "scene": [
+        "indoor setting",
+        "archway or palace/temple",
+        "group of people"
+      ],
+      "details": [
+        "man in traditional Indian attire",
+        "neutral expression",
+        "grand hall with chandeliers"
+      ]
+    },
+    "different": {
+      "Model (blip)": [
+        "still from a video",
+        "scene from a film or television show"
+      ],
+      "Model (llama3.2-vision)": [
+        "central figure is attired in a majestic outfit",
+        "rich red turban, intricately embroidered shirt or jacket with gold accents",
+        "well-groomed mustache and goatee, serious expression",
+        "in the background, two other men standing behind the central figure"
+      ],
+      "Model (llava)": [
+        "neutral expression",
+        "white top",
+        "no visible text on the image",
+        "warm glow to the scene"
+      ],
+      "Model (llava-llama3)": [
+        "gold necklace and earrings",
+        "red headdress, small object in hand",
+        "large archway serving as the backdrop for this scene",
+        "people behind the man are all facing towards him"
       ]
     }
   },
@@ -86,40 +145,20 @@
     "image": "sample_images/312.jpg",
     "common": {
       "scene": [
-        "man with a shaved head",
-        "wearing a white shirt"
+        "man",
+        "white shirt"
       ],
       "details": [
-        "plain and minimalist look",
-        "emphasizes the man's bald head and simple yet stylish attire"
-      ]
-    },
-    "different": {
-      "caption": [
-        "The image depicts a man with a shaved head, wearing a white shirt. The purpose of the image is to showcase the man's appearance and style.",
-        "The image is a still from a film, showing a man with his eyes closed and head slightly tilted to the side. He has short hair and appears to be in a state of contemplation or emotion.",
-        "The image captures a moment of quiet reflection. A man, bald and seemingly deep in thought, stands in a room that exudes an air of solemnity."
-      ]
-    }
-  },
-  {
-    "image": "sample_images/317.jpg",
-    "common": {
-      "scene": [
-        "group of people gathered in a room",
-        "traditional attire"
-      ],
-      "details": [
-        "ornate arches and columns",
-        "intricate carvings on the walls"
+        "bald head",
+        "clean and minimalist look"
       ]
     },
     "different": {
       "details": [
-        "Model (blip): The scene is from the movie 'The Great Ga Ga Ga', which does not match the image.",
-        "Model (llama3.2-vision): The atmosphere is somber and contemplative, with the men's postures conveying a sense of reverence and respect.",
-        "Model (llava): The overall style of the image suggests it might be from a period drama or a film set in India.",
-        "Model (llava-llama3): Every object in this image contributes to a narrative that speaks volumes about tradition, reverence, and grandeur."
+        "Model (blip): A man with a completely bald head, wearing a white shirt.",
+        "Model (llama3.2-vision): The image depicts a man with a shaved head, wearing a white shirt.",
+        "Model (llava): The image is a still from a film, showing a man with his eyes closed and head slightly tilted to the side.",
+        "Model (llava-llama3): The image captures a moment of quiet reflection. A man, bald and seemingly deep in thought, stands in a room that exudes an air of solemnity."
       ]
     }
   }
