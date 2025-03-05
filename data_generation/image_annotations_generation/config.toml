@@ -5,7 +5,9 @@ dataset_path = 'sample_images'
 
 [ModelInfo]
 # modelname = "Salesforce/blip-image-captioning-base"
-modelname = 'llava:7b'
+# modelname = 'llava:7b'
+modelname = 'llava-llama3'
+# modelname = 'llama3.2-vision'
 
 [MetaData]
-outputpath = 'generated_captions/llava/output.json'
+outputpath = 'generated_captions/llava-llama3/output.json'

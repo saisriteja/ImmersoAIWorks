@@ -205,3 +205,9 @@ After adding the new model and modifying the code, you can run the inference by 
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
+
+2. Kill running ollama process
+
+```
+sudo systemctl stop ollama
+```

@@ -5,6 +5,8 @@ import time
 import toml
 from logzero import logger
 
+from tqdm import tqdm
+
 
 class CaptioningPipeline:
     def __init__(self, config_path: str):
@@ -27,7 +29,11 @@ class CaptioningPipeline:
 
             self.model = ImageCaptioningModel(self.model_name)
 
-        if self.model_name == "llava:7b":
+        elif (
+            self.model_name == "llava:7b"
+            or self.model_name == "llama3.2-vision"
+            or self.model_name == "llava-llama3"
+        ):
             from ollama_caption.ollama_caption import ImageCaptioningModel
 
             self.model = ImageCaptioningModel(self.model_name)
@@ -56,7 +62,7 @@ class CaptioningPipeline:
         total_images = 0
         image_paths = self.get_all_images()
 
-        for img_path in image_paths:
+        for img_path in tqdm(image_paths):
             total_images += 1
             caption_conditional = self.model.generate_caption(img_path)["caption"]
             captions[img_path] = (

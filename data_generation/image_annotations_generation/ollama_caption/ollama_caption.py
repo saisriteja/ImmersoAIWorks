@@ -1,5 +1,4 @@
 from PIL import Image
-
 import ollama
 
 
@@ -10,36 +9,31 @@ class ImageCaptioningModel:
         :param model_name: The name of the model to use (e.g., "Salesforce/blip-image-captioning-base").
         :param device: The device to run the model on ("cuda" or "cpu").
         """
-
         self.model_name = model_name
 
-    def generate_caption(self, image_path: str):
-        """_summary_
+    def generate_caption(self, image_path: str, content: str = "Describe this image:"):
+        """Generate a caption for the given image.
 
         Args:
-            image_path (str): image path
+            image_path (str): Image path.
+            content (str): The content/message to send to the model for image description.
+                           Defaults to "Describe this image:".
 
         Returns:
-            dict: caption data
+            dict: Caption data with image path and caption text.
         """
-        if self.model_name == "llava:7b":
+        # Define the chat request structure with the dynamic content
+        message = {
+            "role": "user",
+            "content": content,
+            "images": [image_path],
+        }
 
-            res = ollama.chat(
-                model=self.model_name,
-                messages=[
-                    {
-                        "role": "user",
-                        "content": "Describe this image:",
-                        "images": [
-                            "/media/hp/c587a0ea-5c63-499c-a609-e5e5362a9766/data/ImmersoAIWorks/data_generation/image_annotations_generation/sample_images/312.jpg"
-                        ],
-                    }
-                ],
-            )
+        # Perform the request to the ollama API
+        res = ollama.chat(model=self.model_name, messages=[message])
 
-            data = {
-                "image_path": image_path,
-                "caption": res["message"]["content"],
-            }
-
-            return data
+        # Extract and return the caption along with the image path
+        return {
+            "image_path": image_path,
+            "caption": res.get("message", {}).get("content", "No caption available"),
+        }
