@@ -1,0 +1,13 @@
+conda_env_name = 'generic'
+
+[DatasetInfo]
+dataset_path = '/media/hp/c587a0ea-5c63-499c-a609-e5e5362a9766/data/movies/Ra.One.2011.720p.BluRay.x264.AAC-[YTS.MX]'
+
+[ModelInfo]
+# modelname = "Salesforce/blip-image-captioning-base"
+modelname = 'llava:7b'
+# modelname = 'llava-llama3'
+# modelname = 'llama3.2-vision'
+
+[MetaData]
+outputpath = 'raone_captions/llava/output.json'
