@@ -1,0 +1,9 @@
+diffusers==0.32.2
+logzero==1.7.0
+ollama==0.4.7
+Pillow==11.1.0
+pydantic==2.10.6
+toml==0.10.2
+torch==2.2.2
+tqdm==4.67.1
+transformers==4.49.0
